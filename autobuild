@@ -1,0 +1,22 @@
+#!/bin/bash
+
+FILENAME="wintermute.ly"
+on_changed="lilypond $FILENAME || exit 1; killall timidity; timidity wintermute.midi &!"
+
+case $1 in
+    -h|--help)
+        echo "Autobuild and autoplay script for LilyPond files"
+        echo ""
+        echo "USAGE:"
+        echo "    $0"
+        echo ""
+        echo "FLAGS:"
+        echo "-h, --help     Show this message"
+        echo "-q, --quiet    Don't play the generated MIDI file"
+        exit 0
+    ;;
+    -q|--quiet)
+        on_changed="lilypond $FILENAME" # Just compile, don't play midi
+esac
+
+ls $FILENAME | entr bash -c "$on_changed"
