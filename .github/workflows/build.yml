@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install LilyPond
-      - run: pacman -Syu lilypond --noconfirm
+        run: pacman -Syu lilypond --noconfirm
       
       - name: Build the sheets
-      - run: lilypond wintermute.ly
+        run: lilypond wintermute.ly
