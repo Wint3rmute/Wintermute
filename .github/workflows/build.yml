@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install LilyPond
-        run: apt install lilypond -y
+        run: sudo apt install lilypond -y
       
       - name: Build the sheets
         run: lilypond wintermute.ly
