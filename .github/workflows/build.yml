@@ -10,7 +10,7 @@ jobs:
     # Name the Job
     name: Try building the sheets using LilyPond
     # Set the type of machine to run on
-    runs-on: archlinux-latest
+    runs-on: ubuntu-latest
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install LilyPond
-        run: pacman -Syu lilypond --noconfirm
+        run: apt install lilypond -y
       
       - name: Build the sheets
         run: lilypond wintermute.ly
