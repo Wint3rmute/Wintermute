@@ -1,5 +1,8 @@
 # 🎼 Transcription of the song [Wintermute](https://ryanlott.bandcamp.com/track/wintermute) by [Ryan Lott](https://ryan-lott.com/)
 
+
+[![Lyrics Build](https://github.com/wint3rmute/Wintermute/workflows/Sheets%20build/badge.svg)](https://github.com/wint3rmute/Wintermute/actions)
+
 ## 🏗️ Build
 
 - Install [LilyPond](http://lilypond.org/)
