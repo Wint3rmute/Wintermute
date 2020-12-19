@@ -26,5 +26,5 @@ jobs:
       - name: Archive the built sheets PDF
         uses: actions/upload-artifact@v2
         with:
-          name: wintermute-sheets
+          name: wintermute-sheets-pdf
           path: wintermute.pdf
