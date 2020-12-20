@@ -1,4 +1,4 @@
-name: Build
+name: Checks
 
 # Run this workflow every time a new commit pushed to your repository
 on: push
@@ -6,9 +6,9 @@ on: push
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
-  sheets:
+  formatting:
     # Name the Job
-    name: Sheets 
+    name: Formatting 
     # Set the type of machine to run on
     runs-on: ubuntu-20.04
 
@@ -17,14 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install LilyPond compiler
-        run: sudo apt install lilypond -y
+      - name: Install LilyPond formatter 
+        run: sudo apt install python3-ly -y
       
-      - name: Build the sheets
-        run: lilypond wintermute.ly
-
-      - name: Archive the built sheets PDF
-        uses: actions/upload-artifact@v2
-        with:
-          name: wintermute-sheets-pdf
-          path: wintermute.pdf
+      - name: Check code formatting
+        run: ly indent wintermute.ly | diff wintermute.ly - 
+ 
