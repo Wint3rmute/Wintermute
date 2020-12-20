@@ -8,7 +8,7 @@ jobs:
   # when a job name is not provided
   sheets:
     # Name the Job
-    name: Try building the sheets using LilyPond
+    name: Sheets 
     # Set the type of machine to run on
     runs-on: ubuntu-20.04
 

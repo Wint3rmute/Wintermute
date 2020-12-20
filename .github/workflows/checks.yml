@@ -8,7 +8,7 @@ jobs:
   # when a job name is not provided
   formatting:
     # Name the Job
-    name: Check the sheets formatting
+    name: Formatting 
     # Set the type of machine to run on
     runs-on: ubuntu-20.04
 
