@@ -22,6 +22,7 @@ case $1 in
     -q|--quiet)
         on_changed="lilypond $FILENAME" # Just compile, don't play midi
     ;;
+    "") ;; # do nothing, no args 
     *)
 	echo "Unrecognised command option: $1"
 	echo
