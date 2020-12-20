@@ -3,20 +3,31 @@
 FILENAME="wintermute.ly"
 on_changed="lilypond $FILENAME || exit 1; killall timidity; timidity wintermute.midi &!"
 
+show_help() {
+    echo "Autobuild and autoplay script for LilyPond files"
+    echo ""
+    echo "USAGE:"
+    echo "    $0"
+    echo ""
+    echo "FLAGS:"
+    echo "-h, --help     Show this message"
+    echo "-q, --quiet    Don't play the generated MIDI file"
+}
+
 case $1 in
     -h|--help)
-        echo "Autobuild and autoplay script for LilyPond files"
-        echo ""
-        echo "USAGE:"
-        echo "    $0"
-        echo ""
-        echo "FLAGS:"
-        echo "-h, --help     Show this message"
-        echo "-q, --quiet    Don't play the generated MIDI file"
-        exit 0
+	show_help
+	exit 0
     ;;
     -q|--quiet)
         on_changed="lilypond $FILENAME" # Just compile, don't play midi
+    ;;
+    *)
+	echo "Unrecognised command option: $1"
+	echo
+	show_help
+	exit 1
+
 esac
 
 ls $FILENAME | entr bash -c "$on_changed"
