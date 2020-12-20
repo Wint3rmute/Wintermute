@@ -37,7 +37,7 @@ lower = \relative c {
 
 test = \relative c {
 
- c d e f g
+  c d e f g
 
 
 }
