@@ -21,4 +21,4 @@
 
 - Install [`entr`](https://eradman.com/entrproject/)
 - Run the `autobuild` script from the repository
-- The pdf will autoreload upon source file changes
+- The pdf will autoreload upon source file changes (try the [`zathura` pdf viewer](https://wiki.archlinux.org/index.php/zathura), it reloads automatically and supports theming)
