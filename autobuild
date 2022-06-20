@@ -1,7 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 FILENAME="wintermute.ly"
 on_changed="lilypond $FILENAME || exit 1; killall timidity; timidity wintermute.midi &!"
+
+# If you're using a synthesizer, you can play the midi file on it instead
+# on_changed="lilypond $FILENAME || exit 1; killall pmidi; pmidi -p 128:0 wintermute.midi &!"
+
 
 show_help() {
     echo "Autobuild and autoplay script for LilyPond files"

@@ -17,12 +17,32 @@ upper = \relative c'' {
   \mf
   \partial 2.
   f,2. _\markup {\italic legato }
+  
  
   g8 ( f es  d es \> f  es4 d4. )
   c2. \pp
 
-
+  d8 ( c8 bes8 a8 bes8 c8 bes8 d4 g2 )
   % \relative { c''4\< c\ff\> c c\! }
+
+  <<des2 ges bes>>
+
+  (c8 bes as g as bes as c)
+
+  (f e d c d e d e)
+
+  (c'8 bes as g as bes as4 g4. f2)
+
+  (g8 f es d es f es4)
+
+  c4
+
+  (f8 es d c d es4 d4 )
+
+  as'2
+
+  d4 as4
+
 }
 
 lower = \relative c {
@@ -33,6 +53,7 @@ lower = \relative c {
   g4 (a bes 
   <<f4. a>> 
   ) <<g2. es>> %<<a es>> 
+
 
 }
 
