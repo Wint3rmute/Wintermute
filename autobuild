@@ -1,38 +1,40 @@
 #!/usr/bin/env bash
 
 FILENAME="wintermute.ly"
-on_changed="lilypond $FILENAME || exit 1; killall timidity; timidity wintermute.midi &!"
-
-# If you're using a synthesizer, you can play the midi file on it instead
-# on_changed="lilypond $FILENAME || exit 1; killall pmidi; pmidi -p 128:0 wintermute.midi &!"
-
 
 show_help() {
-    echo "Autobuild and autoplay script for LilyPond files"
-    echo ""
-    echo "USAGE:"
-    echo "    $0"
-    echo ""
-    echo "FLAGS:"
-    echo "-h, --help     Show this message"
-    echo "-q, --quiet    Don't play the generated MIDI file"
+  echo "Autobuild and autoplay script for LilyPond files."
+  echo ""
+  echo "USAGE:"
+  printf "%-15s Only build the notes, don't play anything.\n" "$0"
+  echo ""
+  echo "FLAGS:"
+  echo "-p, --pmidi     Play the generated MIDI file using pmidi."
+  echo "                Recommended if you want to pass MIDI to an external synth."
+  echo "-t, --timidity  Play the generated MIDI file using timidity."
+  echo "-h, --help      Show this message."
 }
 
 case $1 in
-    -h|--help)
-	show_help
-	exit 0
+  -h|--help)
+    show_help
+    exit 0
     ;;
-    -q|--quiet)
-        on_changed="lilypond $FILENAME" # Just compile, don't play midi
+  -t|--timidity)
+    on_changed="lilypond $FILENAME || exit 1; killall timidity; timidity wintermute.midi &!"
     ;;
-    "") ;; # do nothing, no args 
-    *)
-	echo "Unrecognised command option: $1"
-	echo
-	show_help
-	exit 1
+  -p|--pmidi)
+    on_changed="lilypond $FILENAME || exit 1; killall pmidi; pmidi -p 128:0 wintermute.midi &!"
+    ;;
+  "") 
+    on_changed="lilypond $FILENAME"
+    ;;
+  *)
+    echo "Unrecognised command option: $1"
+    echo
+    show_help
+    exit 1
 
-esac
+  esac
 
-ls $FILENAME | entr bash -c "$on_changed"
+  find $FILENAME | entr bash -c "$on_changed"
