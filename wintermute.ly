@@ -10,7 +10,7 @@
 
 upper = \relative c'' {
   \clef treble
-  \key c \major
+  \key g \minor
   \time 4/4
   \tempo 4 = 80
 
@@ -51,7 +51,7 @@ upper = \relative c'' {
 
 lower = \relative c {
   \clef bass
-  \key c \major
+  \key g \minor
   \time 4/4
   d1 %r4
   g4 (a bes 
