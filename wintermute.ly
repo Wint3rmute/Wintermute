@@ -43,6 +43,10 @@ upper = \relative c'' {
 
   d4 as4
 
+  (f8 es d c d es d)
+
+  b'4 c d2
+
 }
 
 lower = \relative c {
@@ -54,6 +58,11 @@ lower = \relative c {
   <<f4. a>> 
   ) <<g2. es>> %<<a es>> 
 
+  r2
+  r2
+  r2
+  r4
+  % ges2
 
 }
 
