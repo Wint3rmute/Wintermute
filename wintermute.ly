@@ -58,13 +58,39 @@ lower = \relative c {
   <<f4 a>> 
   ) <<g2. es>> %<<a es>> 
 
+  (
   e4
   f4
   ges
   %r2
   g
+  )
   r2
-  ges2
+  ges2.
+
+  %g4
+  %as
+  %bes
+  %as
+  (
+  d'4
+  e
+  f
+  e
+  d
+  c
+  bes
+  \clef treble
+  as
+  )
+
+  g' as bes
+
+  c
+  <<g4. bes>>
+  <<f2 as>>
+  %g4.
+  %f2
 
 }
 
