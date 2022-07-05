@@ -12,20 +12,20 @@ upper = \relative c'' {
   \clef treble
   \key c \major
   \time 4/4
-  \tempo 4 = 90
+  \tempo 4 = 80
 
   \mf
   \partial 2.
   f,2. _\markup {\italic legato }
   
  
-  g8 ( f es  d es \> f  es4 d4. )
+  g8 ( f es  d es \> f  es4 d4 )
   c2. \pp
 
-  d8 ( c8 bes8 a8 bes8 c8 bes8 d4 g2 )
+  d8 ( c8 bes8 a8 bes8 c8 bes8 d g2 )
   % \relative { c''4\< c\ff\> c c\! }
 
-  <<des2 ges bes>>
+  <<des2. ges bes>>
 
   (c8 bes as g as bes as c)
 
@@ -41,7 +41,7 @@ upper = \relative c'' {
 
   as'2
 
-  d4 as4
+  d,4
 
   (f8 es d c d es d)
 
@@ -55,14 +55,16 @@ lower = \relative c {
   \time 4/4
   d1 %r4
   g4 (a bes 
-  <<f4. a>> 
+  <<f4 a>> 
   ) <<g2. es>> %<<a es>> 
 
+  e4
+  f4
+  ges
+  %r2
+  g
   r2
-  r2
-  r2
-  r4
-  % ges2
+  ges2
 
 }
 
