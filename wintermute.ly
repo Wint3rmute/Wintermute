@@ -33,9 +33,10 @@ upper = \relative c'' {
 
   (c'8 bes as g as bes as4 g4. f2)
 
-  (g8 f es d es f es4)
+  (g8 f es d es f (es4 es1))
 
-  c4
+
+  c2.
 
   (f8 es d c d es4 d4 )
 
@@ -91,6 +92,23 @@ lower = \relative c {
   <<f2 as>>
   %g4.
   %f2
+
+  \clef bass
+
+  a4,
+  bes
+  b
+  c4
+  es
+  g2.
+
+  <<as2., es2.'>>
+
+  r4.
+
+  as4 as, as2' es,
+
+  as
 
 }
 
