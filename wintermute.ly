@@ -40,13 +40,13 @@ upper = \relative c'' {
 
   (f8 es d c d es4 d4 )
 
-  as'2
+  as'1
 
-  d,4
+  d,2
 
-  (f8 es d c d es d)
+  (f8 es d c d es d4)
 
-  b'4 c d2
+  b'2 c d1.
 
 }
 
@@ -104,17 +104,22 @@ lower = \relative c {
 
   <<as2., es2.'>>
 
-  r4.
+  r4
 
-  as4 as, as2' es,
+  \clef treble
 
+  as4. as2, as2' es,
+
+
+  as4 as2'
+
+  bes4
   as
-
-}
-
-test = \relative c {
-
-  c d e f g
+  g
+  f
+  e
+  es2
+  b1.'
 
 
 }
