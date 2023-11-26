@@ -16,7 +16,6 @@ upper = \relative c'' {
 
   \partial 2.
   f,2. \mf _\markup {\italic legato }
-  
  
   g8 ( f es  d es \> f  es4 d4 )
   c2. \pp
@@ -34,7 +33,6 @@ upper = \relative c'' {
 
   (g8 f es d es f es4 es1)
 
-
   c2.
 
   (f8 es d c d es4 d4 )
@@ -44,10 +42,11 @@ upper = \relative c'' {
   % Last segment
   d,2.
 
+  _\markup \italic{ rallentando }
+
   (f8 es d c d es d4)
 
   bes'2 c d1.
-
 }
 
 lower = \relative c {
