@@ -14,9 +14,8 @@ upper = \relative c'' {
   \time 4/4
   \tempo 4 = 80
 
-  \mf
   \partial 2.
-  f,2. _\markup {\italic legato }
+  f,2. \mf _\markup {\italic legato }
   
  
   g8 ( f es  d es \> f  es4 d4 )
@@ -27,7 +26,7 @@ upper = \relative c'' {
 
   <<des2. ges bes>>
 
-  (c8 bes as g as bes as c)
+  c8 (bes as g as bes as c)
 
   (f e d c d e d e)
 
@@ -40,13 +39,14 @@ upper = \relative c'' {
 
   (f8 es d c d es4 d4 )
 
-  as'1
+  as'1.
 
-  d,2
+  % Last segment
+  d,2.
 
   (f8 es d c d es d4)
 
-  b'2 c d1.
+  bes'2 c d1.
 
 }
 
@@ -95,23 +95,23 @@ lower = \relative c {
 
   \clef bass
 
-  a4,
+  a,4
   bes
   b
   c4
   es
   g2.
 
-  <<as2., es2.'>>
+  <<as,2. es'2.>>
 
   r4
 
   \clef treble
 
-  as4. as2, as2' es,
+  as4. as,2 as'2 es1,
 
-
-  as4 as2'
+  % Last segment
+  as2 as'2
 
   bes4
   as
