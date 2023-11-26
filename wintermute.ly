@@ -10,7 +10,7 @@
 
 upper = \relative c'' {
   \clef treble
-  \key c \major
+  \key c \minor
   \time 4/4
   \tempo 4 = 80
 
@@ -51,7 +51,7 @@ upper = \relative c'' {
 
 lower = \relative c {
   \clef bass
-  \key c \major
+  \key c \minor
   \time 4/4
   d1 %r4
   g4 (a bes <<f4 a>> )
@@ -83,24 +83,22 @@ lower = \relative c {
   as
   )
 
-  g' as bes
-
-  c
-  <<g4. bes>>
+  g'( as bes c
+  <<g4. bes>>)
   <<f2 as>>
-  %g4.
+  %g4. )
   %f2
 
   \clef bass
 
-  a,4
+  a,4 (
   bes
   b
   c4
   es
   g2.
 
-  <<as,2. es'2.>>
+  <<as,2. es'2.>> )
 
   r4
 
@@ -111,15 +109,15 @@ lower = \relative c {
   % Last segment
   as2 as'2
 
-  bes4
+  bes4 (
   as
   g
   f
   e
-  es2
+  es2 )
   b'1.
 
-
+  \bar "|."
 }
 
 \score {
