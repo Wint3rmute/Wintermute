@@ -32,7 +32,7 @@ upper = \relative c'' {
 
   (c'8 bes as g as bes as4 g4. f2)
 
-  (g8 f es d es f (es4 es1))
+  (g8 f es d es f es4 es1)
 
 
   c2.
@@ -55,9 +55,8 @@ lower = \relative c {
   \key c \major
   \time 4/4
   d1 %r4
-  g4 (a bes 
-  <<f4 a>> 
-  ) <<g2. es>> %<<a es>> 
+  g4 (a bes <<f4 a>> )
+  <<g2. es>> %<<a es>>
 
   (
   e4
@@ -108,7 +107,7 @@ lower = \relative c {
 
   \clef treble
 
-  as4. as,2 as'2 es1,
+  as4. as,2 as'2 es,1
 
   % Last segment
   as2 as'2
@@ -119,7 +118,7 @@ lower = \relative c {
   f
   e
   es2
-  b1.'
+  b'1.
 
 
 }
