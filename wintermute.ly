@@ -3,7 +3,7 @@
 \header {
   title = "Wintermute"
   subtitle = "learning structures, vol. 2: end firma"
-  dedication = \markup{ \italic "This transcribtion is a work in progress" }
+  dedication = \markup{ \italic "This transcription is a work in progress" }
   composer = "Composed by Ryan Lott"
   arranger = "Transcribed by Mateusz Bączek"
 }
