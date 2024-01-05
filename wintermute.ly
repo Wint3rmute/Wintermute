@@ -20,7 +20,7 @@ upper = \relative c'' {
   g8 ( f es  d es \> f  es4 d4 )
   c2. \pp
 
-  d8 ( c8 bes8 a8 bes8 c8 bes8 d g2 )
+  d8 ( c8 bes8 a8 bes8 c8 bes8 ) d\staccato g2
   % \relative { c''4\< c\ff\> c c\! }
 
   <<des2. ges bes>>
@@ -31,7 +31,7 @@ upper = \relative c'' {
 
   (c'8 bes as g as bes as4 g4. f2)
 
-  (g8 f es d es f es4 es1)
+  g8 ( f es d es f es4 es1)
 
   c2.
 
@@ -62,9 +62,8 @@ lower = \relative c {
   f4
   ges
   %r2
-  g
+  g2.
   )
-  r2
   ges2.
 
   %g4
@@ -94,11 +93,11 @@ lower = \relative c {
   a,4 (
   bes
   b
-  c4
+  c4 )
   es
   g2.
 
-  <<as,2. es'2.>> )
+  <<as,2. es'2.>>
 
   r4
 
