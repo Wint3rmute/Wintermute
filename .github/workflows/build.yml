@@ -10,12 +10,12 @@ jobs:
     # Name the Job
     name: Sheets 
     # Set the type of machine to run on
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install LilyPond compiler
         run: sudo apt install lilypond -y
@@ -24,7 +24,7 @@ jobs:
         run: lilypond wintermute.ly
 
       - name: Archive the built sheets PDF
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: wintermute-sheets-pdf
           path: wintermute.pdf
